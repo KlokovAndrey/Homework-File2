@@ -2,6 +2,8 @@ package com.file2.myTriangleClass;
 
 import com.file2.myPointClass.MyPoint;
 
+import java.util.Objects;
+
 public class MyTriangle extends MyPoint {
     private MyPoint v1;
     private MyPoint v2;
@@ -41,4 +43,22 @@ public class MyTriangle extends MyPoint {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyTriangle that = (MyTriangle) o;
+        return Objects.equals(v1, that.v1) &&
+                Objects.equals(v2, that.v2) &&
+                Objects.equals(v3, that.v3);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31*result+v1.hashCode();
+        result = 31*result+v2.hashCode();
+        result = 31*result+v3.hashCode();
+        return result;
+    }
 }

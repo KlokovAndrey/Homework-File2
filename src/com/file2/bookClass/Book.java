@@ -1,6 +1,7 @@
 package com.file2.bookClass;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Book extends Author{
     private String name;
@@ -67,5 +68,29 @@ public class Book extends Author{
         }
         s=s.substring(0, s.length()-2);
         return s;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Book book = (Book) o;
+        return Double.compare(book.price, price) == 0 &&
+                qty == book.qty &&
+                Objects.equals(name, book.name) &&
+                Arrays.equals(authors, book.authors);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31*name.hashCode();
+        for(int i=0;i<authors.length;i++){
+            result = 31*result + authors[i].hashCode();
+        }
+        result = 31*result + (int)Double.doubleToLongBits(price);
+        result = 31*result + qty;
+        return result;
     }
 }
