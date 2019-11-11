@@ -1,4 +1,4 @@
-package com.file2.circleClass;
+package com.file2.circle;
 
 import java.util.Objects;
 

@@ -1,6 +1,4 @@
-package com.file2.myPointClass;
-
-import java.util.Objects;
+package com.file2.mypoint;
 
 import static java.lang.Math.sqrt;
 

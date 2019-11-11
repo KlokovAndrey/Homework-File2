@@ -1,4 +1,4 @@
-package com.file2.employeeClass;
+package com.file2.employee;
 
 import java.util.Objects;
 

@@ -1,6 +1,4 @@
-package com.file2.rectangleClass;
-
-import java.util.Objects;
+package com.file2.rectangle;
 
 public class Rectangle {
     private float length = 1.0f;

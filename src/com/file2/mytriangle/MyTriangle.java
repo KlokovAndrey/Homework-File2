@@ -1,6 +1,6 @@
-package com.file2.myTriangleClass;
+package com.file2.mytriangle;
 
-import com.file2.myPointClass.MyPoint;
+import com.file2.mypoint.MyPoint;
 
 import java.util.Objects;
 
